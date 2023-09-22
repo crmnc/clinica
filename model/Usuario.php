@@ -23,11 +23,13 @@ abstract class Usuario
         $this->login = $login;
     }
 
-    function getNome($nome) {
+    function getNome($nome)
+    {
         return $this->nome;
     }
 
-    function setNome($nome) {
+    function setNome($nome)
+    {
         $this->nome = $nome;
     }
 

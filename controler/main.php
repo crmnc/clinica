@@ -7,14 +7,16 @@
  * Se os dados estão corretos, instanciar o objeto do tipo correspondente
  *
  * Esse método:
- * 1- Recebe por parâmetro o login e senha digitados pelo usuario
- * 2- Verifica se a senha corresponde
+ * 1- recebe por parâmetro o login e senha digitados pelo usuário
+ * 2- verifica se a senha corresponde
  * @return Usuario|null
  */
 function efetuarLogin(string $login, string $senha, int $tipoUsuario): ?Usuario
 {
     //TODO: validar login e senha
-    switch ($tipoUsuario){
+
+    switch ($tipoUsuario)
+    {
         case 1:
             return new Medico();
         case 2:
@@ -28,8 +30,9 @@ function efetuarLogin(string $login, string $senha, int $tipoUsuario): ?Usuario
 
 /**
  * Agendamento
- * @todo Fluxo de agendamento.
- * Assim que o usuário for criado, pode usar o mesmo objeto para agendar a consulta.
+ * @todo Fluxo de agendamento
+ * Assim que o usuário for criado, pode usar o mesmo objeto para agendar a consulta
  */
 $usuario = new Paciente("usr1");
+
 $usuario->agendarConsulta(new DateTime(), new Medico());

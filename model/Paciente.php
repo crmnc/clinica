@@ -8,7 +8,8 @@ class Paciente extends Usuario
     private string $email;
     private $consultas;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->consultas = array();
     }
 
@@ -66,7 +67,7 @@ class Paciente extends Usuario
     }
 
     /**
-     * @todo Implementar lógica de buscar consultas.
+     * @todo Implementar lógica de buscar consultas
      * @return array|null
      */
     public function buscarConsultas(): ?array

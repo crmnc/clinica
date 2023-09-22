@@ -4,13 +4,12 @@ class Medico extends Usuario
 {
     private int $crm;
     private string $especialidade;
-
     private $consultas;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->consultas = array();
     }
-
 
     public function getCrm(): int
     {
@@ -39,10 +38,14 @@ class Medico extends Usuario
     public function acessarProntuario(Paciente $paciente) :Prontuario
     {
         //TODO: implementar lógica de buscar o prontuário por paciente
+
         $prontuario = new Prontuario($paciente);
-        if($prontuario->getPaciente()->getLogin() == $paciente->getLogin()){
-            //TODO: Implementar validações
+
+        if($prontuario->getPaciente()->getLogin() == $paciente->getLogin())
+        {
+            //TODO: implementar validações
         }
+
         return $prontuario;
     }
 
@@ -52,10 +55,10 @@ class Medico extends Usuario
      */
     public function atualizarProntuario(Prontuario $prontuario) : ?Prontuario
     {
-        //TODO: Fazer o update do novo prontuario
+        //TODO: fazer o update do novo prontuário
+
         return null;
     }
-
 
     /**
      * @param int $status
@@ -64,7 +67,8 @@ class Medico extends Usuario
      */
     public function listarConsultas(int $status, DateTime $data) : ?array
     {
-        //TODO: Implementar busca no banco de dados
+        //TODO: implementar busca no banco de dados
+
         return array();
     }
 }

@@ -3,7 +3,6 @@
 class Recepcionista extends Usuario
 {
     private int $expediente;
-
     private int $ramal;
 
     /**
@@ -21,26 +20,26 @@ class Recepcionista extends Usuario
     }
 
     /**
-     * @todo Implementar lógica de buscar consultas passando o paciente.
+     * @todo Implementar lógica de buscar consultas passando o paciente
      * @param Paciente $paciente
      * @param DateTime $data
      * @return array|null
      */
     public function buscarConsultasPorPaciente(DateTime $data, Paciente $paciente): ?array
     {
-        //TODO: buscar consultas do banco.
+        //TODO: buscar consultas do banco
         return null;
     }
 
     /**
-     * @todo Implementar lógica de buscar consultas por data.
+     * @todo Implementar lógica de buscar consultas por data
      * @param DateTime $data
      * @return array|null
      */
 
     public function buscarConsultasPorData(DateTime $data): ?array
     {
-        //TODO: buscar consultas do banco.
+        //TODO: buscar consultas do banco
         return null;
     }
 
