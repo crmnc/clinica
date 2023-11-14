@@ -1,5 +1,5 @@
 <?php
-
+namespace model;
 class Medico extends Usuario
 {
     private int $crm;

@@ -1,5 +1,5 @@
 <?php
-
+namespace model;
 class Paciente extends Usuario
 {
     private string $endereco;

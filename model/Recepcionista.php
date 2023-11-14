@@ -1,5 +1,5 @@
 <?php
-
+namespace model;
 class Recepcionista extends Usuario
 {
     private int $expediente;

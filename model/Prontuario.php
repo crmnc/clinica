@@ -1,5 +1,5 @@
 <?php
-
+namespace model;
 class Prontuario
 {
     private Paciente $paciente;

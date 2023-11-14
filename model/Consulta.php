@@ -1,5 +1,5 @@
 <?php
-
+namespace model;
 class Consulta
 {
     private DateTime $data;
