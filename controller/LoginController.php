@@ -41,7 +41,7 @@ class LoginController
             header("Location: /clinica/view/homepage.php");
 
         } else {
-            echo "login inválido";
+            echo "Login inválido";
         }
 
         $stmt->close();

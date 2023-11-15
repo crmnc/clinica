@@ -5,11 +5,13 @@ spl_autoload_register(function ($class) {
     require_once $classPath;
 });
 
+use controller\PacienteController;
 use controller\UsuarioController;
 use controller\LoginController;
 
 $usuarioController = new UsuarioController();
 $loginController = new LoginController();
+$pacienteController = new PacienteController();
 
 if (isset($_GET['action'])) {
     switch ($_GET['action']){
@@ -18,6 +20,9 @@ if (isset($_GET['action'])) {
             break;
         case 'login':
             $loginController->index();
+            break;
+        case 'cadastrarPaciente':
+            $pacienteController->index();
             break;
     }
     exit(); // Terminate further execution
@@ -33,9 +38,10 @@ if (isset($_GET['action'])) {
 </head>
 <body>
 <h2>admin pages</h2>
-<a href="?action=usuarioList">Lista de usuarios</a>
+<a href="?action=usuarioList">Lista de usuários</a>
 <br>
-<a href="?action=login">Pagina de login</a>
+<a href="?action=login">Página de login</a>
 <br>
+<a href="?action=cadastrarPaciente">Cadastrar paciente</a>
 </body>
 </html>

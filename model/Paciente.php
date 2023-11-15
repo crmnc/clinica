@@ -1,5 +1,8 @@
 <?php
 namespace model;
+
+require_once __DIR__ . '/../model/Usuario.php';
+
 class Paciente extends Usuario
 {
     private string $endereco;

@@ -1,5 +1,8 @@
 <?php
 namespace model;
+
+require_once __DIR__ . '/../model/Usuario.php';
+
 class Recepcionista extends Usuario
 {
     private int $expediente;

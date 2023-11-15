@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List of Users</title>
+    <title>Lista de usuários</title>
 </head>
 <body>
     <h2>List of Users</h2>

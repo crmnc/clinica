@@ -2,6 +2,7 @@
 namespace model;
 abstract class Usuario
 {
+
     private string $login;
     private string $senha;
     private string $nome;
@@ -31,6 +32,11 @@ abstract class Usuario
     function setNome($nome)
     {
         $this->nome = $nome;
+    }
+
+    public function setSenha(string $senha): void
+    {
+        $this->senha = $senha;
     }
 
 }

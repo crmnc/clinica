@@ -15,6 +15,7 @@
     }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +39,7 @@
         <option value="3">Recepcionista</option>
     </select>
 
-    <input type="submit" value="logar">
+    <input type="submit" value="Logar">
 </form>
 </body>
 </html>
