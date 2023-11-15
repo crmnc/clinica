@@ -25,10 +25,10 @@
 <body>
 <h1>Login</h1>
 <form method="post" action="">
-    <label for="login">Username:</label>
+    <label for="login">login:</label>
     <input type="text" id="login" name="login" required><br>
 
-    <label for="senha">Password:</label>
+    <label for="senha">senha:</label>
     <input type="password" id="senha" name="senha" required><br>
 
     <label for="Tipo de usuário">Tipo de usuário:</label>

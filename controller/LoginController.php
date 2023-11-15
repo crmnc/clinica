@@ -28,7 +28,7 @@ class LoginController
         $stmt->execute();
         $result = $stmt->get_result();
 
-        // Check if a user was found
+        // Checar se o usuário foi encontrado
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
 
@@ -78,7 +78,7 @@ class LoginController
                     $_SESSION["email"] = $user["email"];
 
                 } else {
-                    echo "nenhuma informação encontrada";
+                    echo "Nenhuma informação encontrada";
                 }
             case 3:
 //                $query = "SELECT * FROM recepcionista p WHERE p.usuario_idUsuario = ?";

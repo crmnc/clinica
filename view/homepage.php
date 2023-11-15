@@ -27,7 +27,7 @@
     <title>Home</title>
 </head>
 <body>
-<h1>Bem vindo <?php echo $_SESSION['nome'] ?></h1>
+<h1>Bem vindo(a), <?php echo $_SESSION['nome'] ?></h1>
 
 <h2>Informações: </h2>
     <?php if($_SESSION["tipo"] == 2){ ?>

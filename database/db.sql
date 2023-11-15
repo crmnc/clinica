@@ -21,12 +21,12 @@ USE `clinica` ;
 -- Table `clinica`.`usuario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `clinica`.`usuario` (
-    `idUsuario` INT(11) NOT NULL AUTO_INCREMENT,
-    `login` VARCHAR(45) NULL DEFAULT NULL,
-    `senha` VARCHAR(45) NULL DEFAULT NULL,
-    `nome` VARCHAR(45) NULL DEFAULT NULL,
-    `tipoUsuario` INT(11) NULL DEFAULT NULL,
-    PRIMARY KEY (`idUsuario`))
+   `idUsuario` INT(11) NOT NULL AUTO_INCREMENT,
+   `login` VARCHAR(45) NULL DEFAULT NULL,
+   `senha` VARCHAR(45) NULL DEFAULT NULL,
+   `nome` VARCHAR(45) NULL DEFAULT NULL,
+   `tipoUsuario` INT(11) NULL DEFAULT NULL,
+   PRIMARY KEY (`idUsuario`))
     ENGINE = InnoDB
     AUTO_INCREMENT = 4
     DEFAULT CHARACTER SET = utf8mb4;
@@ -36,20 +36,22 @@ CREATE TABLE IF NOT EXISTS `clinica`.`usuario` (
 -- Table `clinica`.`paciente`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `clinica`.`paciente` (
-                                                    `idpaciente` INT NOT NULL AUTO_INCREMENT,
-                                                    `endereco` VARCHAR(45) NULL,
-    `dataNascimento` DATETIME NULL,
-    `telefone` INT NULL,
-    `email` VARCHAR(45) NULL,
+    `idpaciente` INT(11) NOT NULL AUTO_INCREMENT,
+    `endereco` VARCHAR(45) NULL DEFAULT NULL,
+    `dataNascimento` DATETIME NULL DEFAULT NULL,
+    `telefone` INT(11) NULL DEFAULT NULL,
+    `email` VARCHAR(45) NULL DEFAULT NULL,
     `usuario_idUsuario` INT(11) NOT NULL,
     PRIMARY KEY (`idpaciente`, `usuario_idUsuario`),
     INDEX `fk_paciente_usuario_idx` (`usuario_idUsuario` ASC),
     CONSTRAINT `fk_paciente_usuario`
     FOREIGN KEY (`usuario_idUsuario`)
-    REFERENCES `clinica`.`usuario` (`idUsuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-    ENGINE = InnoDB;
+        REFERENCES `clinica`.`usuario` (`idUsuario`)
+        ON DELETE NO ACTION
+        ON UPDATE NO ACTION)
+    ENGINE = InnoDB
+    AUTO_INCREMENT = 2
+    DEFAULT CHARACTER SET = utf8mb4;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

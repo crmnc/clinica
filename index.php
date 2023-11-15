@@ -33,7 +33,9 @@ if (isset($_GET['action'])) {
 </head>
 <body>
 <h2>admin pages</h2>
-<a href="?action=usuarioList">Clique aqui para ir ao usuarioList</a>
-<a href="?action=login">Clique aqui para ir ao login</a>
+<a href="?action=usuarioList">Lista de usuarios</a>
+<br>
+<a href="?action=login">Pagina de login</a>
+<br>
 </body>
 </html>
